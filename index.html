@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Приглашение на свадьбу</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Marck+Script&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Главное фото с лепестками (02.jpg) -->
+    <div class="main-photo">
+        <div class="overlay">
+            <div class="invitation-text">
+                <h1 class="names">Айнур <span class="ampersand">&</span> Луиза</h1>
+                <div class="date-location">
+                    <p class="date"><i class="far fa-calendar"></i> 18 июля 2026 года</p>
+                    <!-- <p class="location"><i class="fas fa-map-marker-alt"></i> Усадьба "Белая лилия"</p> -->
+                </div>
+                <div class="quote">
+                    <p>Приглашаем разделить с нами<br>радость самого важного дня</p>
+                </div>
+                <div class="scroll-indicator">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основной контент с РАСТВОРЕНИЕМ фото -->
+    <div class="content-wrapper">
+        <!-- Текст приглашения (03.jpg растворяется в 02.jpg) -->
+        <section class="invitation-message section-bg" 
+                 style="--bg-image: url('06.jpg'); --prev-bg-image: url('02.jpg');">
+            <div class="message-content">
+                <h2><i class="fas fa-envelope-open-text"></i> Дорогие друзья и родные!</h2>
+                <div class="message-text">
+                    <p>Мы рады пригласить вас на нашу свадьбу!</p>
+                    <p>Этот день мы мечтали разделить именно с вами — нашими самыми близкими и дорогими людьми. Ваше присутствие сделает наш праздник по-настоящему светлым и счастливым.</p>
+                    <p>Ждём вас, чтобы вместе отпраздновать начало нашего семейного пути.</p>
+                    <div class="signature">
+                        <p>С любовью,</p>
+                        <p class="signature-names">Айнур и Луиза</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Детали мероприятия (04.jpg растворяется в 03.jpg) -->
+        <section class="details section-bg" 
+                 style="--bg-image: url('04.jpg'); --prev-bg-image: url('06.jpg');">
+            <div class="timeline">
+                <h2><i class="far fa-clock"></i> Расписание дня</h2>
+                
+                <div class="timeline-item">
+                    <div class="timeline-time">16:30</div>
+                    <div class="timeline-content">
+                        <h3>Сбор гостей</h3>
+                        <p>Встреча гостей, общение</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-time">17:00</div>
+                    <div class="timeline-content">
+                        <h3>Церемония</h3>
+                        <p>Торжественное бракосочетание</p>
+                    </div>
+                </div>
+                
+                <!-- <div class="timeline-item">
+                    <div class="timeline-time">16:30</div>
+                    <div class="timeline-content">
+                        <h3>Фотографии</h3>
+                        <p>Свадебная фотосессия, прогулка по парку</p>
+                    </div>
+                </div> -->
+                
+                <div class="timeline-item">
+                    <div class="timeline-time">18:00</div>
+                    <div class="timeline-content">
+                        <h3>Банкет</h3>
+                        <p>Праздничный ужин, тосты и поздравления</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-time">21:00</div>
+                    <div class="timeline-content">
+                        <h3>Торт и танцы</h3>
+                        <p>Разрезание свадебного торта, первый танец</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Дресс-код (05.jpg растворяется в 04.jpg) -->
+        <section class="dress-code section-bg" 
+                 style="--bg-image: url('06.jpg'); --prev-bg-image: url('04.jpg');">
+            <div class="dress-content">
+                <h2><i class="fas fa-user-tie"></i> Дресс-код</h2>
+                <p class="dress-intro">Наша свадьба не предусматривает строгого дресс-кода, единственная просьба к дамам - откажитесь от белых платьев.</p>
+                
+                <!-- <div class="dress-guidelines">
+                    <div class="guideline">
+                        <i class="fas fa-female"></i>
+                        <p><strong>Для женщин:</strong> платья пастельных тонов (светло-зелёные, бежевые, кремовые), элегантные наряды</p>
+                    </div>
+                    <div class="guideline">
+                        <i class="fas fa-male"></i>
+                        <p><strong>Для мужчин:</strong> светлые костюмы или рубашки с брюками в пастельной гамме</p>
+                    </div>
+                    <div class="guideline">
+                        <i class="fas fa-palette"></i>
+                        <p><strong>Цветовая гамма:</strong> нежные зелёные, бежевые, кремовые и пастельные оттенки</p>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- Форма подтверждения (06.jpg растворяется в 05.jpg) -->
+        <section class="rsvp section-bg" 
+                 style="--bg-image: url('04.jpg'); --prev-bg-image: url('06.jpg');">
+            <div class="rsvp-content">
+                <h2><i class="far fa-check-circle"></i> Подтвердите, пожалуйста</h2>
+                <p class="rsvp-intro">Просим дать ответ до 1 июня 2026</p>
+                
+                <form id="rsvpForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Ваше имя" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="attendance" required>
+                                <option value="" disabled selected>Присутствие</option>
+                                <option value="yes">С радостью буду</option>
+                                <option value="plusone">Буду с парой</option>
+                                <option value="family">Придём семьёй</option>
+                                <option value="no">К сожалению, не смогу</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Ваши пожелания или особые предпочтения..." rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-note">
+                        <p><i class="fas fa-info-circle"></i> Пожалуйста, ответьте до 1 августа 2024 года</p>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="far fa-paper-plane"></i> Отправить ответ
+                    </button>
+                </form>
+                
+                <div id="formMessage" class="form-message"></div>
+            </div>
+        </section>
+
+        <!-- Контакты с таким же плавным переходом -->
+        <section class="contacts section-bg" 
+                 style="--bg-image: url('06.jpg'); --prev-bg-image: url('04.jpg');">
+            <div class="contacts-content">
+                <h2><i class="fas fa-phone-alt"></i> Контакты</h2>
+                <p class="contacts-intro">Если у вас есть вопросы, обращайтесь к нашему организатору</p>
+                
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Анна</h3>
+                            <p>Организатор свадьбы</p>
+                            <p class="phone">+7 (XXX) XXX-XX-XX</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Место проведения</h3>
+                            <p>Усадьба "Белая лилия"</p>
+                            <p class="address">Солнечная улица, 15</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Футер -->
+        <footer>
+            <div class="footer-content">
+                <p class="footer-quote">"Любовь — это когда две половинки находят друг друга и становятся одним целым"</p>
+                <div class="footer-names">
+                    <div class="name">Айнур</div>
+                    <div class="heart"><i class="fas fa-heart"></i></div>
+                    <div class="name">Луиза</div>
+                </div>
+                <p class="wedding-date">15 августа 2024 года</p>
+            </div>
+            
+            <div class="floral-border"></div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
