@@ -12,16 +12,23 @@
 </head>
 <body>
     <!-- Главное фото с лепестками (02.jpg) -->
+    <!-- Главное фото с лепестками -->
     <div class="main-photo">
         <div class="overlay">
             <div class="invitation-text">
                 <h1 class="names">Айнур <span class="ampersand">&</span> Луиза</h1>
-                <div class="date-location">
-                    <p class="date"><i class="far fa-calendar"></i> 18 июля 2026 года</p>
-                    <!-- <p class="location"><i class="fas fa-map-marker-alt"></i> Усадьба "Белая лилия"</p> -->
+                
+                <!-- Кнопка музыки -->
+                <div class="music-control">
+                    <button id="musicToggle" class="music-btn">
+                        <i class="fas fa-music"></i>
+                        <span>Включить музыку</span>
+                    </button>
                 </div>
-                <div class="quote">
-                    <p>Приглашаем разделить с нами<br>радость самого важного дня</p>
+                
+                <div class="date-location">
+                    <!-- <p class="date"><i class="far fa-calendar"></i> 18 июля 2026 года</p> -->
+                    <!-- <p class="location"><i class="fas fa-map-marker-alt"></i> Усадьба "Белая лилия"</p> -->
                 </div>
                 <div class="scroll-indicator">
                     <i class="fas fa-chevron-down"></i>
@@ -30,11 +37,16 @@
         </div>
     </div>
 
+<!-- Аудио элемент (скрытый) -->
+<audio id="weddingAudio" loop preload="auto">
+    <source src="1.mp3" type="audio/mpeg">
+</audio>
+
     <!-- Основной контент с РАСТВОРЕНИЕМ фото -->
     <div class="content-wrapper">
         <!-- Текст приглашения (03.jpg растворяется в 02.jpg) -->
         <section class="invitation-message section-bg" 
-                 style="--bg-image: url('06.jpg'); --prev-bg-image: url('02.jpg');">
+                 style="--bg-image: url('06.jpg');">
             <div class="message-content">
                 <h2><i class="fas fa-envelope-open-text"></i> Дорогие друзья и родные!</h2>
                 <div class="message-text">
@@ -94,32 +106,42 @@
                         <p>Разрезание свадебного торта, первый танец</p>
                     </div>
                 </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">23:00</div>
+                    <div class="timeline-content">
+                        <h3>Окончание банкета</h3>
+                        <p>Завершение вечера</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Дресс-код (05.jpg растворяется в 04.jpg) -->
-        <section class="dress-code section-bg" 
-                 style="--bg-image: url('06.jpg'); --prev-bg-image: url('04.jpg');">
-            <div class="dress-content">
-                <h2><i class="fas fa-user-tie"></i> Дресс-код</h2>
-                <p class="dress-intro">Наша свадьба не предусматривает строгого дресс-кода, единственная просьба к дамам - откажитесь от белых платьев.</p>
-                
-                <!-- <div class="dress-guidelines">
-                    <div class="guideline">
-                        <i class="fas fa-female"></i>
-                        <p><strong>Для женщин:</strong> платья пастельных тонов (светло-зелёные, бежевые, кремовые), элегантные наряды</p>
-                    </div>
-                    <div class="guideline">
-                        <i class="fas fa-male"></i>
-                        <p><strong>Для мужчин:</strong> светлые костюмы или рубашки с брюками в пастельной гамме</p>
-                    </div>
-                    <div class="guideline">
-                        <i class="fas fa-palette"></i>
-                        <p><strong>Цветовая гамма:</strong> нежные зелёные, бежевые, кремовые и пастельные оттенки</p>
-                    </div>
-                </div> -->
+<!-- Дресс-код + Место проведения (два отдельных блока) -->
+<section class="dress-code section-bg" 
+         style="--bg-image: url('06.jpg'); --prev-bg-image: url('04.jpg');">
+    <div class="dress-content">
+        <!-- БЛОК 1: Дресс-код -->
+        <div class="info-block">
+            <h2><i class="fas fa-user-tie"></i> Дресс-код</h2>
+            <p class="dress-intro">Наша свадьба не предусматривает строгого дресс-кода, единственная просьба к дамам - откажитесь от белых платьев.</p>
+        </div>
+        
+        <!-- БЛОК 2: Место проведения -->
+        <div class="info-block">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <div class="contact-info">
+                    <h3>Место проведения</h3>
+                    <p>«Алая роза»</p>
+                    <p class="address">д. Уындыково ул. Лесная 9</p>
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
         <!-- Форма подтверждения (06.jpg растворяется в 05.jpg) -->
         <section class="rsvp section-bg" 
@@ -150,7 +172,7 @@
                     </div>
                     
                     <div class="form-note">
-                        <p><i class="fas fa-info-circle"></i> Пожалуйста, ответьте до 1 августа 2024 года</p>
+                        <p><i class="fas fa-info-circle"></i> Пожалуйста, ответьте до 1 июня 2026 года</p>
                     </div>
                     
                     <button type="submit" class="submit-btn">
@@ -163,14 +185,14 @@
         </section>
 
         <!-- Контакты с таким же плавным переходом -->
-        <section class="contacts section-bg" 
+        <!-- <section class="contacts section-bg" 
                  style="--bg-image: url('06.jpg'); --prev-bg-image: url('04.jpg');">
             <div class="contacts-content">
-                <h2><i class="fas fa-phone-alt"></i> Контакты</h2>
-                <p class="contacts-intro">Если у вас есть вопросы, обращайтесь к нашему организатору</p>
+                 <h2><i class="fas fa-phone-alt"></i> Контакты</h2>
+                <p class="contacts-intro">Если у вас есть вопросы, обращайтесь к нашему организатору</p> 
                 
                 <div class="contact-cards">
-                    <div class="contact-card">
+                     <div class="contact-card">
                         <div class="contact-icon">
                             <i class="fas fa-user"></i>
                         </div>
@@ -179,7 +201,7 @@
                             <p>Организатор свадьбы</p>
                             <p class="phone">+7 (XXX) XXX-XX-XX</p>
                         </div>
-                    </div>
+                    </div> 
                     
                     <div class="contact-card">
                         <div class="contact-icon">
@@ -187,13 +209,13 @@
                         </div>
                         <div class="contact-info">
                             <h3>Место проведения</h3>
-                            <p>Усадьба "Белая лилия"</p>
-                            <p class="address">Солнечная улица, 15</p>
+                            <p> «Алая роза»</p>
+                            <p class="address">д. Уындыково ул. Лесная 9</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Футер -->
         <footer>
@@ -204,7 +226,7 @@
                     <div class="heart"><i class="fas fa-heart"></i></div>
                     <div class="name">Луиза</div>
                 </div>
-                <p class="wedding-date">15 августа 2024 года</p>
+                <p class="wedding-date">18 июля 2026 года</p>
             </div>
             
             <div class="floral-border"></div>
