@@ -18,8 +18,8 @@ body {
     position: relative;
     width: 100%;  /* вместо 90vw */
     height: 100vh;  /* вместо 90vh */
-    background-image: url('hero.jpg');
-    background-size: 90%;
+    background-image: url('hero1.jpg');
+    background-size: 105%;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
@@ -36,7 +36,7 @@ body {
     height: 100%;
     background: rgba(180, 189, 170, 0.15);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     text-align: center;
     padding: 20px;
@@ -690,5 +690,94 @@ footer {
 @media screen and (max-width: 767px) {
     input, select, textarea {
         font-size: 16px !important;
+    }
+}
+
+/* ========== КНОПКА МУЗЫКИ ========== */
+.music-control {
+    margin: 1rem 0 1.5rem 0;
+}
+
+.music-btn {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(180, 189, 170, 0.5);
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    font-weight: 500;
+    color: #4a5345;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.music-btn i {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #637257;
+}
+
+.music-btn:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.music-btn.playing {
+    background: rgba(100, 115, 90, 0.85);
+    color: white;
+}
+
+.music-btn.playing i {
+    color: white;
+    animation: musicPulse 1s ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 767px) {
+    .music-btn {
+        padding: 8px 16px;
+    }
+}
+
+/* Каждый блок имеет свою собственную подложку */
+.info-block {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    padding: clamp(1.5rem, 4vw, 2rem);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Отступ между блоками */
+.info-block:first-child {
+    margin-bottom: 2rem;
+}
+
+/* Стили для контактной карточки внутри блока */
+.info-block:last-child .contact-card {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+.info-block:last-child .contact-card:hover {
+    transform: none;
+}
+
+/* Адаптация */
+@media (max-width: 767px) {
+    .info-block:first-child {
+        margin-bottom: 1.5rem;
     }
 }
