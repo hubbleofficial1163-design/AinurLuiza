@@ -46,3 +46,49 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+// Музыкальный плеер
+document.addEventListener('DOMContentLoaded', function() {
+    const audio = document.getElementById('weddingAudio');
+    const musicBtn = document.getElementById('musicToggle');
+    let isPlaying = false;
+    
+    // Проверяем, есть ли аудио элемент
+    if (audio && musicBtn) {
+        // Устанавливаем громкость (опционально)
+        audio.volume = 0.5;
+        
+        musicBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            if (isPlaying) {
+                // Останавливаем музыку
+                audio.pause();
+                musicBtn.classList.remove('playing');
+                musicBtn.innerHTML = '<i class="fas fa-music"></i><span>Включить музыку</span>';
+                isPlaying = false;
+            } else {
+                // Запускаем музыку (нужно взаимодействие с пользователем)
+                audio.play().then(() => {
+                    musicBtn.classList.add('playing');
+                    musicBtn.innerHTML = '<i class="fas fa-volume-up"></i><span>Выключить музыку</span>';
+                    isPlaying = true;
+                }).catch(error => {
+                    console.log('Автовоспроизведение заблокировано браузером. Нажмите кнопку снова.');
+                    // Некоторые браузеры блокируют автовоспроизведение
+                    // Показываем небольшое уведомление
+                    musicBtn.innerHTML = '<i class="fas fa-music"></i><span>Нажмите ещё раз</span>';
+                    setTimeout(() => {
+                        if (!isPlaying) {
+                            musicBtn.innerHTML = '<i class="fas fa-music"></i><span>Включить музыку</span>';
+                        }
+                    }, 1500);
+                });
+            }
+        });
+        
+        // Опционально: сохраняем состояние при скролле (не выключаем музыку)
+        // Опционально: автоматически пытаемся запустить (но браузеры блокируют)
+    }
+});
