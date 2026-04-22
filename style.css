@@ -781,3 +781,32 @@ footer {
         margin-bottom: 1.5rem;
     }
 }
+
+/* Убираем синее выделение при нажатии на кнопки */
+button,
+.submit-btn,
+.music-btn,
+.scroll-indicator,
+[role="button"],
+a {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Дополнительно для кнопок с фокусом */
+button:focus,
+.submit-btn:focus,
+.music-btn:focus {
+    outline: none;
+}
+
+/* Для элементов с :active состоянием */
+button:active,
+.submit-btn:active,
+.music-btn:active,
+.scroll-indicator:active {
+    -webkit-tap-highlight-color: transparent;
+    transform: scale(0.98);
+}
